@@ -7,12 +7,8 @@ const server = express()
 server.use(express.json())
 server.use(logIncomingRequest())
 
-server.post('/plex/webhook', (req, res) => {
-  res.json({ success: true })
-})
-
 server.use('*', (_, res) => {
-  res.json({ 404: true })
+  res.json({ success: true })
 })
 
 export { server }
