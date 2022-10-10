@@ -7,7 +7,7 @@ const server = express()
 server.use(express.json())
 server.use(logIncomingRequest())
 
-server.post('/webhook', (req, res) => {
+server.post('/plex/webhook', (req, res) => {
   console.log(req.body)
   res.json({ success: true })
 })
